@@ -1,0 +1,414 @@
+/* Layout Setup */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color:#ff7043;
+  
+  padding: 1rem 2rem;
+  font-size: medium;
+  
+}
+
+/* Hero */
+.hero {
+  background-image: url("lake.png");
+  background-size: cover;
+  text-align: center;
+  padding: 5rem 1rem;
+  color:black;
+}
+.btn-primary:hover{
+    background-color: #f4511e;
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Grid Cards */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* image transition effect for grid-preview */
+.card img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.card img:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Form */
+form {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+/* Button styles - add so you can see it working */
+.btn-primary {
+  display: inline-block;
+  background-color: #ff7043;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #f4511e;
+}
+
+/* simple rule to make it obvious that CSS is loaded */
+body {
+  background-color: #f5f5f5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar { flex-direction: column; }
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #1e88e5;
+  color: white;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  color: white;
+  font-size: medium;
+  text-decoration: none;
+}
+
+/* remove underline from navbar links and ensure white text */
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline; /* optional hover effect */
+}
+/* Destinations page specific */
+.destinations .grid-preview .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.destinations .grid-preview h2 {
+  text-align: center;
+  margin-top: 2rem;
+  color: #333;
+}
+
+.destinations .grid-preview .card {
+  overflow: hidden;
+}
+
+.destinations .grid-preview .card-grid {
+  gap: 1rem;
+  padding: 1rem;
+}
+.testimonial {
+  background: rgb(250, 149, 113);
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Note styling: center text and make span bold */
+.note h1 {
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.note span {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Contact page styles (scoped to .contact-page) */
+.contact-page {
+  --accent: #ff7043;
+  --accent-dark: #f4511e;
+}
+
+.contact-page .contact-form {
+  max-width: 720px;
+  margin: 3rem auto;
+  background: linear-gradient(180deg, #ffffff, #fffaf8);
+  padding: 2.25rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(22, 27, 30, 0.06);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+.contact-page .contact-form h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: #222;
+  font-size: 1.6rem;
+}
+
+.contact-page label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.contact-page input[type="text"],
+.contact-page input[type="email"],
+.contact-page input[type="tel"],
+.contact-page textarea {
+  width: 100%;
+  padding: 0.75rem 0.85rem;
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+  background: #fff;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: box-shadow 0.18s ease, border-color 0.18s ease, transform 0.12s ease;
+}
+
+.contact-page input:focus,
+.contact-page textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 6px 18px rgba(255,112,67,0.12);
+  transform: translateY(-1px);
+}
+
+.contact-page textarea { min-height: 120px; resize: vertical; }
+
+.contact-page .btn-primary {
+  background: linear-gradient(90deg, var(--accent), var(--accent-dark));
+  border: none;
+  padding: 0.9rem 1.6rem;
+  border-radius: 10px;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(244,81,30,0.14);
+}
+
+.contact-page .btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+.contact-page .faq { margin-top: 2rem; }
+
+.contact-page footer { margin-top: 3rem; }
+
+/* Booking page specific */
+.booking-page {
+  --accent: #ff7043;
+  --accent-dark: #f4511e;
+}
+
+.booking-page .booking-panel {
+  max-width: 820px;
+  margin: 2.5rem auto;
+  background: linear-gradient(180deg, #ffffff, #fffaf8);
+  padding: 1.75rem;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(22,27,30,0.06);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+.booking-page .booking-panel h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #222;
+  font-size: 1.6rem;
+}
+
+.booking-page label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.booking-page input[type="text"],
+.booking-page input[type="email"],
+.booking-page input[type="tel"],
+.booking-page input[type="number"],
+.booking-page select,
+.booking-page textarea {
+  width: 100%;
+  padding: 0.75rem 0.85rem;
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+  background: #fff;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: box-shadow 0.18s ease, border-color 0.18s ease, transform 0.12s ease;
+}
+
+.booking-page input:focus,
+.booking-page textarea:focus,
+.booking-page select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 6px 18px rgba(255,112,67,0.12);
+  transform: translateY(-1px);
+}
+
+.booking-page textarea { min-height: 120px; resize: vertical; }
+
+.booking-page .btn-primary {
+  background: linear-gradient(90deg, var(--accent), var(--accent-dark));
+  border: none;
+  padding: 0.9rem 1.6rem;
+  border-radius: 10px;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(244,81,30,0.14);
+}
+
+.booking-page .btn-primary:hover { transform: translateY(-2px); }
+
+.booking-page .summary {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #fff8f5;
+  border-radius: 8px;
+  border: 1px solid rgba(255,112,67,0.08);
+}
+
+@media (max-width: 700px) {
+  .booking-page .booking-grid { grid-template-columns: 1fr; }
+}
+
+/* -----------------------------
+   Responsive helpers & breakpoints
+   Applied globally to make pages adapt
+   ----------------------------- */
+
+/* use border-box everywhere */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* responsive container helper */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* typography scaling (small adjustments) */
+html { font-size: 16px; }
+@media (min-width: 1200px) { html { font-size: 18px; } }
+@media (max-width: 480px) { html { font-size: 15px; } }
+
+/* navbar tweaks */
+.navbar { align-items: center; gap: 0.5rem; }
+.navbar nav { display: flex; gap: 1rem; align-items: center; }
+@media (max-width: 768px) {
+  .navbar { flex-direction: column; padding: 0.75rem 1rem; }
+  .navbar nav { flex-direction: column; width: 100%; align-items: center; }
+  .navbar a { width: auto; }
+}
+
+/* grid cards: ensure adaptive column sizes */
+.card-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin: 1rem; }
+
+/* images responsive default */
+img { max-width: 100%; height: auto; display: block; }
+
+/* table responsiveness */
+.pricing-table { overflow-x: auto; }
+.pricing-table table { width: 100%; min-width: 600px; }
+
+/* form and panel spacing for small screens */
+form, .contact-form, .booking-panel { width: 100%; }
+@media (max-width: 700px) {
+  .contact-page .contact-form, .booking-page .booking-panel { padding: 1rem; margin: 1rem; }
+}
+
+/* buttons become full width on very small screens for easier tapping */
+@media (max-width: 480px) {
+  .btn-primary { width: 100%; display: block; text-align: center; }
+  .card-grid { gap: 0.75rem; }
+  .logo { font-size: 1.25rem; }
+  .hero { padding: 3rem 1rem; }
+  /* reduce heavy shadows on small screens */
+  .card, .testimonial, .contact-form, .booking-panel { box-shadow: none; border: 1px solid rgba(0,0,0,0.03); }
+}
+
+/* Testimonials layout: responsive grid */
+.testimonial-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+
+/* small utility tweaks */
+.muted { color: #666; }
+
+
+ th, td {
+  border: 1px solid coral;
+  padding: 0.75rem;
+  text-align: center;
+  background-color: yellowgreen;
+ }
+ .pricing-table h2 {
+  color: black;
+  margin-bottom: 1rem;
+  text-align: center;
+ }
+ .contact-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+gap: 40px;
+}
+ 

@@ -96,6 +96,12 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
   .navbar { flex-direction: column; }
+  /* stack navigation links vertically and center them */
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
 }
 footer {
   text-align: center;
@@ -116,6 +122,9 @@ footer {
   color: white;
   font-size: medium;
   text-decoration: none;
+  /* allow items to wrap onto new lines on narrow viewports */
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* remove underline from navbar links and ensure white text */

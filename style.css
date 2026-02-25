@@ -8,7 +8,7 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  background-color:#ff7043;
+  background-color:lightblue;
   
   padding: 1rem 2rem;
   font-size: medium;
@@ -112,7 +112,7 @@ footer {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: white;
+  color: maroon;
   
 }
 .nav-links {
@@ -129,7 +129,7 @@ footer {
 
 /* remove underline from navbar links and ensure white text */
 .navbar a {
-  color: white;
+  color: black;
   text-decoration: none;
   padding: 0.5rem;
   text-transform: uppercase;
@@ -138,6 +138,7 @@ footer {
 
 .navbar a:hover {
   text-decoration: underline; /* optional hover effect */
+  color: #222;
 }
 /* Destinations page specific */
 .destinations .grid-preview .card img {
@@ -419,5 +420,11 @@ form, .contact-form, .booking-panel { width: 100%; }
   margin: auto;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
 gap: 40px;
+}
+header{
+  position: sticky;
+  opacity: 0.7;
+  top:0;
+  z-index: 1000;
 }
  
